@@ -153,9 +153,183 @@
                     i++;
                }
 
+               /* On réalise que seuls les lignes 3,8,13,18,23...vont s'afficher differement
+               Donc on cherche comment les discrimiers des autres nombre
+               On remarque que chacun de ses nombre modulo 5 = 3
+               i % 5 = 3
+               C'est normal, on commence à 3, et après à chaque fois on ajoute 5, donc il reste toujours 3
+               */
 
 
+
+               // Boucle FOR 
+               console.log("Une boucle for")
+               for (i = 1; i <= 100; i++) {
+                    console.log("Encore et encore...")
+               }
+
+               // Exercices Boucle for 
+
+               // 1. Ecrivez tout les nombres entre 1 et 100
+               // 2. Ecrivez tout les nombres entre 100 et 1
+               // 3. Ecrivez tout les nombres paires entre 1 et 200
+               // 4. Ecrivez tout les nombres impaires entre 50 et -100
+               // 5. A l’aide d’une boucle, écrivez la table de multiplication de 8 jusqu’a 100
+               // 8 * 0 = 0
+               // 8 * 1 = 1
+               // …
+               // 8 * 100 = 800
+               // 6. Ecrivez la liste de tout les nombres au carré entre 1 et 1000
+               // 1, 4, 9, 16, 25..
+
+               console.log("Exo 1")
+               for (let i = 1; i <= 100; i++) {
+                    console.log(i)
+               }
+
+               console.log("Exo 2")
+               for (let i = 100; i >= 1; i--) {
+                    console.log(i)
+               }
+
+               console.log("Exo 3")
+               for (let i = 2; i <= 200; i = i + 2) {
+                    console.log(i)
+               }
+
+               console.log("Exo 4")
+               for (let i = 49; i >= -99; i = i - 2) {
+                    console.log(i)
+               }
+
+               console.log("Exo 5")
+               for (let i = 0; i <= 100; i++) {
+                    let resultat = i * 8
+                    console.log("8 * " + i + " = " + resultat)
+               }
+
+               console.log("Exo 6")
+               for (let i = 1; i <= 31; i++) {
+                    console.log(i * i)
+               }
+
+               console.log("Exo 7")
+               // let table = 3
+               // console.log("Table de " + table)
+               // for (let i = 0; i <= 10; i++) {
+               //      console.log(table + " * " + i + " = " + table * i)
+               // }
+
+
+
+               for (let table = 0; table <= 10; table++) { // Pour table variant de 0 a 10
+                    console.log("Table de " + table)  //    On affiche "Table de "
+                    for (let i = 0; i <= 10; i++) {         // Pour i variant de 0 a 10
+                         console.log(table + " * " + i + " = " + table * i)  // on affiche la ligne de multiplication en cours
+                    }
+               }
+
+
+
+               // Array 
+
+               // 2 façons de demarrer une liste :
+               let frigo = new Array(
+                    "Concombre",
+                    "Tomate",
+                    "Salade",
+                    "Ketchup",
+                    "Yaourt",
+                    "Yaourt"
+               )
+               let debarras = [
+                    "Cereale",
+                    "Conserve",
+                    "Riz",
+                    "Pomme de terre"
+               ]
+
+               console.log(frigo)
+               console.log(debarras)
+               console.log(frigo.length) // Permet d'avoir la longueur de la liste
+
+
+               console.log(debarras[2])
+
+               // Exercice, a l'aide d'une boucle for, afficher tout les éléments de la liste
+               console.log("Exercice afficher liste")
+               for (let i = 0; i < debarras.length; i++) {
+                    console.log(debarras[i])
+               }
+
+
+               // Tableau associatifs
+
+               let sallePantin = {
+                    nbOrdi: 12,
+                    nbSalle: 3,
+                    wifi: true
+               };
+
+               console.log(sallePantin["wifi"]);
+
+               for (let cle in sallePantin) {
+                    console.log(cle + " : " + sallePantin[cle])
+               }
+
+               // Creez une liste de couleurs
+               // Afficher tout les éléments de la façon suivante 
+               // "Le code hexa de la couleur rouge est #FF0000"
+
+               // "rouge" -> "#FF0000"   
+               // "vert"  -> "#00FF00"
+               // "bleu"  -> "#0000FF"
+
+               // Exercice 2
+               // Creez une liste dont chaque élément contient une lettre du mot Salut
+               // Puis écrivez 
+               // Dans un premier temps : Salut 
+               // Dans un deuxieme temps : tulaS
+
+               let mot = ["S", "a", "l", "u", "t"]
+
+               mot[0]
+               mot[1]
+               mot[2]
+               mot[3]
+               mot[4]
+
+
+               for (let i = 0; i < mot.length; i++) {
+                    console.log(mot[i])
+               }
+
+
+               for (let i = mot.length - 1; i >= 0; i--) {
+                    console.log(mot[i])
+               }
+
+               // Exercice 3
+               // Ecrivez une liste avec 10 jouets à l'interieur
+               // avion
+               // dinette
+               // trotinette
+               // velo
+               // poupee
+               // ballon
+               // bille
+               // arc
+               // barbie
+               // pistolet
+
+
+               // Ensuite, écrivez la phrase "La poupée est rangée dans la cle 6" (par exemple si la cle est 6, un autre chiffre sinon)
+
+
+               // Exercice 4
                // 
+
+
 
           </script>
      </body>
