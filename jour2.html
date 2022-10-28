@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+     <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Intro JS</title>
+          <link rel="stylesheet" href="css/reset.css">
+          <style>
+               body {
+                    height: 100vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+               }
+
+               body h1 {
+                    font-size: 3em;
+                    font-weight: bold;
+                    font-family: cursive;
+               }
+          </style>
+     </head>
+
+     <body>
+          <h1>Bonjour tout le monde</h1>
+
+
+          <script>
+
+               // LISTE EXERCICES WHILE
+
+               //    1. Creez une boucle infinie qui écrit “Encore et encore…”
+               // 	2. Creez une boucle qui écrit sur 100 lignes “Encore et encore”
+               // 	3. Creez une boucle qui écrit sur 100 lignes “Encore et encore”, sauf la première ligne, on écrit “Je suis le commencement”
+               //    4. Creez une boucle qui écrit sur 100 lignes “Encore et encore”, sauf la 20IEME ligne, on écrit “Je suis lA 20ieme ligne” 
+               // 	5. Creez une boucle qui écrit sur 100 lignes “Encore et encore”, sauf la première ligne, on écrit “Je suis le commencement”, et la dernière ligne
+
+               // 		Creez une variable x que vous pouvez faire varier
+
+               // 	6. Creez une boucle qui écrit sur x ligne, “Encore et encore”, sauf la dernière ligne, on écrit “Je suis la derniere ligne.
+               // 		Vous pouvez faire varier x
+               // 	7. Creer une boucle qui écrit “Je suis une ligne paire” pour toutes les lignes paires, et “Je suis une ligne impaire” pour toutes les lignes impairs
+               // 	8. Creez une boucle qui écrit “Je suis normal” sur toutes les lignes, sauf les multiples de 7, ou une ligne vide est renvoyée
+               // 	9. Creez une boucle qui écrit “Je suis normal” sur toutes les lignes.
+               //  Execption : On écrira le numero de la ligne en cours pour la troisieme ligne, puis a partir de cette ligne, toutes les 5 lignes
+
+
+               // while (true){
+               //      console.log("Encore et encore...");
+               // }
+
+               let i = 1
+               while (i <= 100) {
+                    console.log("Encore et encore");
+                    i++;
+               }
+
+
+               console.log("Exercice 3")
+               i = 1
+               while (i <= 100) {
+                    if (i == 1) {
+                         console.log("Je suis le commemcement")
+                    } else {
+                         console.log("Encore et encore");
+                    }
+                    i++;
+               }
+
+
+               console.log("Exercice 4")
+               i = 1
+               while (i <= 100) {
+                    if (i == 20) {
+                         console.log("Je suis la 20ieme ligne")
+                    } else {
+                         console.log("Encore et encore");
+                    }
+                    i++;
+               }
+
+
+               console.log("Exercice 5")
+               i = 1
+               while (i <= 100) {
+                    if (i == 1) {
+                         console.log("Je suis le commemcement")
+                    } else if (i == 100) {
+                         console.log("Je suis la derniere ligne")
+                    }
+                    else {
+                         console.log("Encore et encore");
+                    }
+                    i++;
+               }
+
+
+               console.log("Exercice 6")
+               x = 200
+               i = 1
+               while (i <= x) {
+                    if (i == x) {
+                         console.log("Je suis la derniere ligne")
+                    }
+                    else {
+                         console.log("Encore et encore : " + i);
+                    }
+                    i++;
+               }
+
+
+               console.log("Exercice 7")
+               x = 200
+               i = 1
+               while (i <= x) {
+                    if (i % 2 == 0) {
+                         console.log("Je suis une ligne pair")
+
+                    } else {
+                         console.log("Je suis une ligne impair")
+
+                    }
+                    i++;
+               }
+
+               console.log("Exercice 8")
+               x = 200
+               i = 1
+               while (i <= x) {
+                    if (i % 7 == 0) {
+                         console.log("")
+
+                    } else {
+                         console.log("Je suis normal")
+
+                    }
+                    i++;
+               }
+
+               console.log("Exercice 9")
+               x = 200
+               i = 1
+               while (i <= x) {
+                    if (i % 5 == 3) {
+                         console.log(i)
+
+                    } else {
+                         console.log("Je suis normal")
+
+                    }
+                    i++;
+               }
+
+
+
+               // 
+
+          </script>
+     </body>
+
+
+</html>
