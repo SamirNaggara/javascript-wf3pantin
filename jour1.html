@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+     <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Intro JS</title>
+          <link rel="stylesheet" href="css/reset.css">
+          <style>
+               body {
+                    height: 100vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+               }
+
+               body h1 {
+                    font-size: 3em;
+                    font-weight: bold;
+                    font-family: cursive;
+               }
+          </style>
+     </head>
+
+     <body>
+          <h1>Bonjour tout le monde</h1>
+     </body>
+     <script>
+          // Console.log permet d'afficher dans la console
+          console.log("Bonjour" + " les " + " amis");
+
+          console.log(5 + 5);
+
+          /*
+               On a deja vu deux types:
+                    - Chaine de caracteres
+                    - Nombre
+
+               Pour des chaines de caractere, "+" signifie concatenation, c'est a dire qu'il va coller la deuxieme chaine a la premiere 
+               Pour des nombres, "+" signifie addition"
+          */
+
+          console.log(5 + 5) // Addition
+          console.log(5 - 5) // Soustraction
+          console.log(5 * 5) // Multiplication
+          console.log(5 / 4) // Division
+          console.log(10 % 3) // Modulo
+
+          /*
+          On peut stocker des nombres ou des chaines de caractere dans des variables 
+          */
+          let nombre1 = 8;
+          let nombre2 = 3;
+
+          let resultat = nombre1 * nombre2;
+
+          console.log(resultat)
+          console.log(typeof (resultat))
+          // typeof permet de connaitre le type d'une variable 
+
+          // Boolean
+          // Un boolean est une variable qui ne peut prendre que 2 valeurs.
+          // Vrai, ou faux
+          let test = true
+          console.log(test)
+
+
+
+
+
+
+          // Comparaison 
+
+          let chaine1 = "Salut"
+          let chaine2 = "Hello"
+          let nb1 = 8;
+          let nb2 = 12;
+
+          // chaine1 = chaine2
+          // console.log(chaine1)
+
+          console.log(chaine1 == chaine2) // Egalité 
+          console.log(nb1 > nb2) // Supérieur 
+          console.log(nb1 >= nb2) // Supérieur ou égal 
+          console.log(nb1 < nb2) // Inférieur 
+          console.log(nb1 <= nb2) // Inférieur ou egal 
+          console.log(nb1 != nb2) // Différent de 
+
+          // Le == verifie la valeur 
+          // Le === vérfie la valeur ET le type 
+          console.log(8 == "8")
+          console.log(8 === "8")
+
+
+          console.log(typeof (chaine1 == chaine2))
+
+          // Les opérateurs logiques 
+
+          // Le et &&
+          // true && true = true
+          // false && true = false
+          // true && false = false
+          // false && false = false
+          let bonnesNotes = false;
+          let estSage = true;
+
+          let vaADisney = bonnesNotes && estSage;
+
+          console.log(vaADisney)
+
+          // Le ou ||
+
+          // true || true = true
+          // true || false = true
+          // false || true = true 
+          // false || false = false
+
+          let vientDeManger = false
+          let pueDeLaGueule = false
+
+          let brosseLesdent = vientDeManger || pueDeLaGueule
+          console.log(brosseLesdent)
+
+
+          // Conditions 
+
+          // Si la condition est vrai, on lance une instruction, sinon, on lance une autre instruction
+          let ilPleut = false;
+
+          if (ilPleut) {
+               console.log("Je prends mon parapluie")
+          } else {
+               console.log("Je sors normal")
+          }
+
+          /**
+           * Un if attends un boolean comme condition.
+           * Si le boolean est vrai, l'inscruction se déclenche
+           * Sinon, c'est ce qu'il y a dans le else qui se déclenche
+           * Tout les nombres sont condidérés comme true, sauf le 0
+           * Toutes les chaines de caracteres sont considérés comme true, sauf la chaine de caractere vide ""
+           */
+
+          let var1 = 8
+          let var2 = 9
+          if ("") {
+               console.log("la condition est vrai")
+          } else {
+               console.log("la condition est fause")
+          }
+
+
+          let age = 20;
+          let taille = 190;
+          let couleurCheveux = "brun";
+
+          // Si l'age est 30, la taille, 190, et la couleur de cheveux est brun, alors ecrire "C'est Samir !"
+          // Si toutes les caracteristiques sont les meme sauf l'age qui est plus jeune que 30ans, alors écrire "C'est Samir, mais plus jeune !"
+          // Sinon, on écrit "Ce n'est pas Samir"
+
+          if (age == 30 && taille == 190 && couleurCheveux == "brun") {
+               console.log("C'est Samir")
+          } else if (age < 30 && taille == 190 && couleurCheveux == "brun") {
+               console.log("c'est Samir mais plus jeune")
+          }
+          else {
+               console.log("Ce n'est pas Samir")
+          }
+
+          // Si la personne est mineure, on dit "Désolé, ce programme ne fonctionne pas sur les mineurs (avec le meme exemple)
+
+          if (age < 18) {
+               console.log("Désolé, ce programme ne fonctionne pas sur les mineurs")
+          } else if (age == 30 && taille == 190 && couleurCheveux == "brun") {
+               console.log("C'est Samir")
+          } else if (age < 30 && taille == 190 && couleurCheveux == "brun") {
+               console.log("c'est Samir mais plus jeune")
+          }
+          else {
+               console.log("Ce n'est pas Samir")
+          }
+
+
+          if (age < 18) {
+               console.log("Désolé, ce programme ne fonctionne pas sur les mineurs")
+
+          } else {
+               if (age == 30 && taille == 190 && couleurCheveux == "brun") {
+                    console.log("C'est Samir")
+               } else if (age < 30 && taille == 190 && couleurCheveux == "brun") {
+                    console.log("c'est Samir mais plus jeune")
+               }
+               else {
+                    console.log("Ce n'est pas Samir")
+               }
+          }
+
+
+          // Des boucles 
+
+          test = true
+          while (test) {
+               console.log("Je suis l'instruction qui se repete")
+               test = false;
+          }
+
+          // Exercice : Creer une boucle qui écrit "Je suis l'instruction qui se repete 15 fois"
+
+          let nombreTour = 0
+          while (nombreTour < 15) {
+               console.log("Je suis l'instruction qui se repete : " + nombreTour)
+               nombreTour = nombreTour + 1
+          }
+
+
+
+
+
+     </script>
+
+</html>
