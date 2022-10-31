@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+     <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Intro JS</title>
+          <link rel="stylesheet" href="css/reset.css">
+          <style>
+               body {
+                    height: 100vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+               }
+
+               body h1 {
+                    font-size: 3em;
+                    font-weight: bold;
+                    font-family: cursive;
+                    color: red
+               }
+          </style>
+     </head>
+
+     <body>
+          <h1 id="titre" class="element">Bonjour tout le monde</h1>
+          <button id="bouton" class="element">Bouton</button>
+
+
+          <script>
+
+               let reponse = prompt("Comment ça va");
+               console.log(reponse)
+
+               /* Exercice : Si la reponse est 0, ecrire dans la console "Vous avez choisi 0
+               Si la reponse est 1, ecrire dans la console "vous avez choisi 1"
+               Si la reponse est 2, ecrire dans la console "vous avez choisi 2"
+               Si la reponse est 3, ecrire dans la console "vous avez choisi 3"
+               Si la reponse est 4, ecrire dans la console "vous avez choisi 4"
+               Si c'est autre chose, ecrire dans la console "Vous n'avez pas choisi un nombre entre 0 et 4
+               */
+
+
+               if (reponse == 0) {
+                    console.log("Vous avez choisi 0")
+               }
+               else if (reponse == 1) {
+                    console.log("Vous avez choisi 1")
+               }
+               else if (reponse == 2) {
+                    console.log("Vous avez choisi 2")
+               }
+               else if (reponse == 3) {
+                    console.log("Vous avez choisi 3")
+               }
+               else if (reponse == 4) {
+                    console.log("Vous avez choisi 4")
+               }
+               else {
+                    console.log("Vous n'avez pas choisi un nombre entre 0 et 4")
+               }
+
+
+               // Refaire cet exercice, en utilisant un switch
+
+
+               switch (reponse) {
+                    case '0':
+                         console.log('Vous avez choisi 0');
+                         break;
+                    case '1':
+                         console.log('Vous avez choisi 1');
+                         break;
+                    case '2':
+                         console.log('Vous avez choisi 2');
+                         break;
+                    case '3':
+                         console.log('Vous avez choisi 3');
+                         break;
+                    case '4':
+                         console.log('Vous avez choisi 4');
+                         break;
+                    default:
+                         console.log("Vous n'avez pas choisi un nombre entre 0 et 4");
+               }
+
+               // Concatenation
+               console.log("Vous avez écrit " + reponse)
+               console.log('Vous avez écrit ' + reponse)
+               console.log(`Vous avez écrit ${reponse}`)
+
+               // Le symbole \ permet d'échapper un caractere. Ceca signifie qu'il annule les super propriété du caractere suivant
+               console.log('Je m\'appelle Samir \\')
+
+
+
+               // Affichez autant de fois "Bonjour n°x" que choisi par l'utilisateur 
+               // Vous utiliserez un prompt pour récuperer l'information et la stocker dans une variable 
+
+               let nbBonjour = prompt("Combien de fois voulez vous qu'on vous dise bonjour ?")
+
+               console.log(nbBonjour)
+
+               for (let i = 1; i <= nbBonjour; i++) {
+                    console.log("Bonjour n°" + i)
+               }
+
+
+               // Les fonctions 
+
+
+               function machineADireBonjour(nb) {
+                    for (let i = 1; i <= nb; i++) {
+                         console.log("Bonjour n°" + i)
+                    }
+               }
+
+               machineADireBonjour(15)
+
+               // Ecrire une fonction qui prendra un nombre d'arbre en parametre et qui écrira le nombre de feuilles total du jardin.
+               // Chaque arbre à 800 feuilles
+
+               function nbFeuille(nbArbre) {
+                    console.log(800 * nbArbre) // On affiche le resultat voulu dans la console, mais il n'est pas renvoyé, donc pas récuperable
+                    return 800 * nbArbre  // Le résultat n'est pas affiché dans la console, mais il est retourné. On peut alors le stocker dans une variable, et le manipuler
+               }
+
+               nbFeuille(8)
+               nbFeuille(15)
+               nbFeuille(20)
+               nbFeuille(30)
+               nbFeuille(50)
+
+               console.log(typeof (nbFeuille(15)))
+
+
+               if (nbFeuille(1) < 3000) {
+                    console.log("Je peux m'en sortir seul")
+               } else {
+                    console.log("J'ai besoin d'aide")
+               }
+
+
+               // Soit 2 variable, age et le genre
+
+               // Creez une fonction qui renvoie true si la personne est un homme de plus de 70 ans 
+
+               let age = 56
+               let genre = "homme"
+
+               function vieilleHomme(age, genre) {
+                    if (age < 70) {
+                         return false
+                    }
+
+                    if (genre != "homme") {
+                         return false
+                    }
+
+                    return true
+               }
+
+
+               if (vieilleHomme(age, genre)) {
+                    console.log("Oui, c'est un vieux !")
+               }
+
+
+
+               // Creez une fonction qui renvoie le prix avec la TVA incluse
+
+               // Creez une autre fonction qui renvoie le prix avec la TVA incluse, MAIS avec un taux à définir.
+               // La fonction prends donc 2 parametres cette fois
+
+               function prixTtc(prixHt) {
+                    let taux = 20;
+                    let pttc = prixHt + prixHt * taux / 100
+                    return pttc
+               }
+               console.log(prixTtc(50))
+
+               // En écrivant taux = 20 dans les parametres, on considère que si au moment de l'appel le taux n'est pas défini, alors le taux doit être égal a 20
+               function prixTtcTaxeVariable(prixHt, taux = 20) {
+                    let pttc = prixHt + prixHt * taux / 100
+                    return pttc
+               }
+
+               console.log(prixTtcTaxeVariable(100, 50))
+               console.log(prixTtcTaxeVariable(100))
+
+
+
+               /* Portee de variable
+                    - var crée la variable en global
+                    - let créé la variable dans son espace locale
+                    - const créé la cariable dans son espace locale et ne doit pas etre reassigner
+
+                    Par défaut, utilisons let le plus souvent
+               */
+               var age1 = 30
+
+               {
+                    let variable = "coucou"
+                    console.log(variable)
+
+                    var variable2 = "Var2"
+                    console.log(variable2)
+
+                    const variable3 = "Var3"
+
+               }
+               //console.log(variable)
+               // console.log(variable2)
+               // console.log(variable3)
+
+
+               // Le DOM
+
+               // Le DOM est un objet qui contient tout le HTML de la page, et les propriétés de chaque élément
+               // Tout est dans le mot clef "document"
+               console.log(document)
+
+               // On utilise getElementById pour récuperer un élément précis
+               let monTitre = document.getElementById("titre")
+
+               console.log(monTitre)
+
+               // On peut ensuite modifier un élément de style de la façon suivante
+               monTitre.style.color = "blue"
+
+
+               // Ici, on change la couleur du titre lorsque l'on clique sur le bouton
+               let monBouton = document.getElementById("bouton")
+               function changeColor() {
+                    monTitre.style.color = "yellow"
+               }
+               monBouton.addEventListener("click", changeColor)
+
+
+               // Ecrire un bout de code pour que lorsque l'on clique sur le titre lui meme, il redevienne rouge
+               monTitre.addEventListener("click", function () {
+                    monTitre.style.color = "red"
+               })
+
+               let listeElements = document.getElementsByClassName("element")
+
+               console.log(listeElements)
+
+               // Exercice : En utilisant la boucle de votre choix, faite en sorte qu'en survolant un élément qui contient la classe "element", celui change de font-size
+
+               for (let unElement of listeElements) {
+                    unElement.addEventListener("mouseover", function () {
+                         console.log("je me declenche")
+                         monTitre.style.backgroundColor = "red"
+                         monTitre.style.fontSize = "140px"
+                    })
+
+                    unElement.addEventListener("mouseout", function () {
+                         console.log("je me declenche")
+                         monTitre.style.backgroundColor = "transparent"
+                         monTitre.style.fontSize = "70px"
+
+                    })
+               }
+
+               // document.getElementById("mon-id") On peut selectionner par l'id
+               // document.getElementsByClassName("ma-class") On peut selectionner par la class
+               // document.querySelector("header .conteneur img") On peut selectionner avec le chemin CSS qui nous convient
+               // document.querySelectorAll("header div")  Pareil que query selector, mais nous renvoie une liste
+
+          </script>
+     </body>
+
+
+</html>
