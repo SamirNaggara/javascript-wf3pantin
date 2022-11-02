@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+     <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Intro JS</title>
+          <link rel="stylesheet" href="css/reset.css">
+          <style>
+               body {
+                    height: 100vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+               }
+
+               body h1 {
+                    font-size: 3em;
+                    font-weight: bold;
+                    font-family: cursive;
+                    color: red
+               }
+          </style>
+     </head>
+
+     <body>
+          <h1 id="titre" class="element">Bonjour tout le monde</h1>
+          <button id="bouton" class="element">Bouton</button>
+
+
+          <script>
+
+               //                exercice liste 1
+
+               // let prenom = ["marc", "Jean", "andrea", "zied", "jeanne", "mohamed"]
+
+               // 1_ Parcourir et afficher toute la liste
+               // 	// En utilisant un for ... of
+               // 2_ Parcourir la liste, et afficher seulement les prenoms commançant par la lettre m
+               // 	// pensez à "string.charAt()"
+               // 3_ Parcourir toute la liste, et afficher seulement les prenoms commançant par la lettre j (minuscule ou majucule)
+               // 4_ Parcourir la liste et n'afficher que les prenoms de 4 lettres
+               // 5_ Parcourir la liste et n'afficher que les prenom plus long que 6 lettres (inclus)
+
+
+
+               // 6_ Parcourir la liste et enlever toutes les majuscules des premières lettres s'il y en a (les transformer en minuscule)
+               // 7_ Dans la liste, intervertir "marc" par "mohamed"
+               // 8_ Ajouter le prenom "anna" à la fin de la liste
+               // 9_ Ajouter le prenom "sophie" au tout début de la liste
+               // 10_ Retirez "andrea" de la liste
+
+
+               let listPrenom = ["marc", "Jean", "andrea", "zied", "jeanne", "mohamed"]
+
+
+               console.log("Exercice 1")
+               for (let prenom of listPrenom) {
+                    console.log(prenom)
+               }
+
+               console.log("Exercice 2")
+               for (let prenom of listPrenom) {
+                    if (prenom.charAt(0) == "m") {
+                         console.log(prenom)
+                    }
+               }
+
+               console.log("Exercice 3")
+               for (let prenom of listPrenom) {
+                    if (prenom.charAt(0).toLowerCase() == "j") {
+                         console.log(prenom)
+                    }
+               }
+
+               console.log("Exercice 4")
+               for (let prenom of listPrenom) {
+                    if (prenom.length == 4) {
+                         console.log(prenom)
+                    }
+               }
+
+               console.log("Exercice 5")
+               for (let prenom of listPrenom) {
+                    if (prenom.length >= 6) {
+                         console.log(prenom)
+                    }
+               }
+
+
+
+               console.log("Exercice 6")
+               for (let i = 0; i < listPrenom.length; i++) {
+                    listPrenom[i] = listPrenom[i].toLowerCase()
+               }
+               console.log(listPrenom)
+
+
+               console.log("Exercice 7")
+               let memory = listPrenom[0]
+               listPrenom[0] = listPrenom[listPrenom.length - 1]
+               listPrenom[listPrenom.length - 1] = memory
+               console.log(listPrenom)
+
+
+               console.log("Exercice 8")
+               listPrenom.push("Anna")
+               console.log(listPrenom)
+
+
+               console.log("Exercice 9")
+               listPrenom.unshift("Sophie")
+               console.log(listPrenom)
+
+               // console.log("Exercice 10")
+               // listPrenom.splice(listPrenom, 5)
+               // console.log(listPrenom)
+
+          </script>
+     </body>
+
+
+</html>
