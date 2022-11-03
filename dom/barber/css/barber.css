@@ -1,0 +1,901 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html{
+        --black: #000;
+        --white: #fff;
+        --darkgray: #191c24;
+        --red: #eb1616;
+        scroll-behavior: smooth;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: Arial;
+}
+
+body {
+    background-color: var(--black);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.container-fluid {
+    width: 100%;
+    margin: auto;
+    background-color: var(--black);
+    position: absolute;
+    top: 40%;
+}
+
+.d-flex {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: space-between;
+}
+
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: flex-start;
+    padding: 30px 30px 10px 30px;
+    align-content: flex-start;
+    justify-content: space-between;
+    background-color: var(--darkgray);
+}
+
+/* dropdown */
+
+.navbar .dropdown {
+    position: relative;
+    display: inline-flex;
+    text-transform: uppercase;
+}
+
+.navbar .dropdown a.liens {
+    
+    text-decoration: none;
+    color: gray;
+    font-size: 1.3rem;
+    margin-left : 1rem;
+}
+.navbar .dropdown a.liens[title] {
+    color: gray;
+    
+}
+.navbar .dropdown a.liens[title]:hover {
+    color: var(--red);
+}
+
+.navbar .dropdown .sous-menu {
+    width: 10rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--darkgray);
+    display: none;
+    padding: 1rem;
+    z-index: 1;
+}
+
+.navbar .dropdown .sous-menu a.links {
+    display: block;
+    text-decoration: none;
+    color: gray;
+    background: none;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+    padding: 0.5rem;
+}
+.navbar .dropdown .sous-menu a.links:hover {
+    color: var(--red);
+    
+}
+
+.navbar .dropdown:hover .sous-menu {
+    display: block;
+    animation: slideInDown 0.5s ease-in-out;
+}
+
+/* animation slideInDown */
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* #pg {
+    color: gray;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.3rem;
+    margin-left: 20px;
+    border: none;
+    background-color: var(--darkgray);
+}
+
+#pg:hover {
+    color: var(--red);
+    
+} */
+
+.navbar .link a {
+    color: gray;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1.3rem;
+}
+
+.navbar .link a:hover {
+    color: var(--red);
+}
+
+.navbar .link a:first-child {
+    color: var(--red);
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1.3rem;
+}
+
+
+
+.navbar .link a:last-child {
+    color: white;
+    font-family: 'Anton', sans-serif;
+    background-color: var(--red);
+    padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1rem;
+}
+
+.navbar .link a:last-child:hover {
+    color: yellow;
+}
+
+/* Photo principale */
+
+.cut {
+    background-color: var(--black);
+}
+
+.ph {
+    position: relative;
+    opacity: 40%;
+    width: 100%;
+    height: 100%;
+}
+
+
+.cut h1 {
+    color: white;
+    position: absolute;
+    font-size: 4.5rem;
+    top: 50%;
+    left: 30%;
+}
+
+.cut h4 {
+    color: white;
+    position: absolute;
+    font-size: 1.8rem;
+    top: 75%;
+    left: 30%;
+}
+
+
+/* About */
+
+.about {
+    margin-top: 6rem;
+}
+.man {
+    width: 50%;
+    position: relative;
+}
+
+.man .bo {
+    width: 70%;
+    height: 70%;
+    top: 0%;
+    left: 25%;
+    position: relative;
+}
+
+.year {
+    font-size: 1.2rem;
+    position: absolute;
+    color: #fff;
+    background-color: var(--darkgray);
+    padding: 4rem 8rem 3rem 2rem;
+    top: 75%;
+}
+
+.year h1 {
+    color: var(--red);
+}
+
+.ab {
+    width: 50%;
+}
+.ab h1 {
+    width: 16%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--red);
+    background-color: var(--darkgray);
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    margin-bottom: 1.4rem;
+}
+
+.ab h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1.9rem;
+}
+
+.ab p {
+    color: gray;
+    font-size: 1.5rem;
+    margin-bottom: 1.9rem;
+}
+
+.sicl h3 {
+    color: white;
+    margin-bottom: 1.4rem;
+}
+
+.since {
+    width: 50%;
+    font-size: 1.5rem;
+    text-align: left;
+}
+.client {
+    width: 50%;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+/* Services */
+
+.service {
+    width: 100%;
+    margin: 5rem 0 3rem 0;
+}
+
+.service h1 {
+    width: 8%;
+    text-align: center;
+    margin: auto;
+    font-size: 1.2rem;
+    color: var(--red);
+    background-color: var(--darkgray);
+    padding: 0.3rem 1rem 0.3rem 1rem;
+}
+
+.service h2 {
+    color: white;
+    font-size: 2rem;
+    width: 25%;
+    text-align: center;
+    padding-top: 1rem;
+    margin: auto;
+}
+
+.serv1, .serv2, .serv3, .serv4, .serv5, .serv6 {
+    position: relative;
+    background-color: var(--darkgray);
+    padding: 3rem 3rem 3rem 5rem;
+}
+
+.service1 h1, .service2 h1 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.service1, .service2 {
+    margin-bottom: 2rem;
+}
+
+.service1 p, .service2 p {
+    color: gray;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.service1 h2, .service2 h2 {
+    color: var(--red);
+}
+
+.logo1, .logo2, .logo3, .logo4, .logo5, .logo6 {
+    position: absolute;
+    top: 15%;
+    left: 0%;
+    width: 15%;
+    text-align: center;
+    background-color: var(--black);
+    padding: 0.5rem;
+}
+
+
+/* Price */
+
+.pripl {
+    width: 100%;
+    margin-top: 7rem;
+    gap: 0;
+    
+}
+
+.price {
+    width: 50%;
+    background-color: var(--darkgray);
+    padding: 7.2rem 2rem 7.6rem 2rem;
+}
+
+.price h1 {
+    width: 23%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--red);
+    background-color: var(--black);
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.price h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.plan {
+    width: 50%;
+}
+
+.ice {
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 1rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.price h3 {
+    color: white;
+}
+
+.price h4 {
+    color: var(--red);
+}
+
+/* Meet */
+
+.meet {
+    width: 100%;
+    margin: 7rem 0 3rem 0;
+}
+
+.meet h1 {
+    width: 10%;
+    text-align: center;
+    margin: auto;
+    font-size: 1.2rem;
+    color: var(--red);
+    background-color: var(--darkgray);
+    padding: 0.3rem 1rem 0.3rem 1rem;
+}
+
+.meet h2 {
+    color: white;
+    font-size: 2rem;
+    width: 25%;
+    text-align: center;
+    padding-top: 1rem;
+    margin: auto;
+}
+
+.our img {
+    width: 100%;
+}
+
+.one, .two, .three, .four {
+    width: 25%;
+}
+
+.text {
+    padding: 2rem 0 2rem 0;
+    background-color: var(--darkgray);
+}
+
+.text h1 {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.text h2 {
+    color: var(--red);
+    text-align: center;
+
+}
+
+
+/* Hours */
+
+.open {
+    width: 100%;
+    margin-top: 7rem;
+    gap: 0;
+    
+}
+
+.hours {
+    width: 50%;
+    background-color: var(--darkgray);
+    padding: 7.2rem 2rem 7.7rem 2rem;
+}
+
+.hours h1 {
+    width: 25%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--red);
+    background-color: var(--black);
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.hours h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.plan {
+    width: 50%;
+}
+
+.ice2 {
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 1rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.hours h3 {
+    color: white;
+}
+
+.hours h4 {
+    color: gray;
+}
+
+.ice2[type="clo"] {
+    border-bottom: none;
+}
+
+.ice2[type="clo"] h4 {
+   color: var(--red);
+}
+
+/* Testimonial */
+
+.test {
+    width: 100%;
+    margin: 7rem 0 3rem 0;
+}
+
+.test h1 {
+    width: 10%;
+    text-align: center;
+    margin: auto;
+    font-size: 1.2rem;
+    color: var(--red);
+    background-color: var(--darkgray);
+    padding: 0.3rem 1rem 0.3rem 1rem;
+}
+
+.test h2 {
+    color: white;
+    font-size: 2rem;
+    width: 30%;
+    text-align: center;
+    padding-top: 1rem;
+    margin: auto;
+}
+.test h3 {
+    color: white;
+    font-size: 1.5rem;
+    width: 15%;
+    text-align: center;
+    padding-top: 3rem;
+    margin: auto;
+}
+.test h4 {
+    color: var(--red);
+    font-size: 1rem;
+    width: 10%;
+    text-align: center;
+    padding-top: 0.5rem;
+    margin: auto;
+}
+
+.test p {
+    color: gray;
+    font-size: 1.2rem;
+    width: 50%;
+    text-align: center;
+    padding: 1.5rem 0 4rem 0;
+    margin: auto;
+}
+
+.trio {
+    width: 25%;
+    margin: auto;
+}
+
+.uno, .dos, .tres {
+    background-color: var(--darkgray);
+    padding: 1rem;
+}
+
+.uno img, .dos img {
+    width: 100%;
+    top: 50%;
+}
+
+/* Footer */
+
+.foot {
+    background-color: var(--darkgray);
+    padding-top: 5rem;
+}
+
+.foot h1 {
+    color: white;
+}
+
+.get {
+    flex-direction: column;
+}
+
+.get p {
+    color: gray;
+    font-size: 1.2rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.get .fa-solid {
+    color: var(--red);
+    background-color: var(--black);
+    padding: 0.5rem;
+    margin-right: 1rem ;
+}
+
+.quick {
+    flex-direction: column;
+}
+
+.quick p {
+    font-size: 1.2rem;
+    margin: 1rem 0 1rem 0;
+    color: gray;
+}
+
+.quick a {
+    text-decoration: none;
+    color: gray;
+    margin-left: 1rem;
+}
+
+.quick a:hover {
+    color: var(--red);
+}
+
+.quick .fa-solid {
+    color: gray;
+    font-size: 0.6rem;
+}
+
+.sign {
+    background-color: white;
+    margin: 2rem 0 3rem 0;
+    padding: 0.3rem 0.5rem 0.3rem 1rem;
+}
+
+.sign input {
+    font-size: 1.2rem;
+    border: none;
+}
+
+.sign button {
+    color: white;
+    border: var(--red);
+    background-color: var(--red);
+    padding: 0.8rem;
+
+}
+
+.social .fa-brands {
+    color: var(--red);
+    background-color: var(--black);
+    padding: 1rem;
+}
+
+.end {
+    color: gray;
+    background-color: var(--black);
+    padding: 1.2rem 0 1.2rem 2rem;
+    margin-top: 4rem;
+}
+
+.social .btn-smooth {
+    margin-left: 6rem;
+    font-size: 1rem;
+}
+.social .fa-solid {
+    color: var(--red);
+    font-size: 2.5rem;
+}
+
+.social .fa-solid:hover {
+    color: yellow;
+}
+
+/* Nous contacter */
+
+.pripl2 {
+    width: 100%;
+    margin-top: 7rem;
+    gap: 0;
+    
+}
+
+.nous {
+    width: 50%;
+    background-color: var(--darkgray);
+    padding: 6.9rem 2rem 5.8rem 2rem;
+}
+
+.nous h1 {
+    width: 27%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--red);
+    background-color: var(--black);
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.nous h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.plan {
+    width: 50%;
+}
+
+.ice3 {
+    margin: 1rem 0 1rem 0;
+}
+
+.nous h3 {
+    font-size: 1rem;
+    color: gray;
+}
+
+.nous a {
+    text-decoration: none;
+    color: var(--red);
+}
+
+.nous input {
+    width: 100%;
+    color: gray;
+    border: 1px solid gray;
+    background-color: var(--darkgray);
+    padding: 1rem;
+}
+
+.nous textarea {
+    width: 100%;
+    color: gray;
+    background-color: var(--darkgray);
+    border: 1px solid gray;
+    padding: 1rem 0rem 0 1rem;
+}
+
+.nous .a, .nous .b {
+    width: 50%;
+}
+
+.nous button {
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-color: red;
+    border: none;
+    padding: 1.5rem 0 1.5rem 0;
+}
+
+
+/* titre des categorie */
+.phup {
+    position: relative;
+    width: 100%;
+    opacity: 40%;
+}
+
+.cutup {
+    align-content: center;
+    background-color: var(--black);
+}
+
+.cutup h1 {
+    width: 100%;
+    text-align: center;
+    color: white;
+    position: absolute;
+    font-size: 4.5rem;
+    top: 21%;
+}
+
+
+/* Media Query */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding-top: 1rem;
+    }
+    .d-flex{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .navbar {
+        width: 100%;
+        flex-direction: column;
+        padding-bottom: 1rem;
+    }
+   
+    .cut h1  {
+        top: 35%;
+        left: 20%;
+        font-size: 120%;
+        width: 100%;
+    }
+    
+    .cut h4 {
+        top: 45%;
+        left: 20%;
+        font-size: 90%;
+        width: 100%;
+    }
+    .man {
+        width: 100%;
+        margin-bottom: 8rem;
+    }
+    .container, .ab, .nous, .plan, .ice, .ice2, .price, .hours, .test, .meet, .our {
+        width: 100%;
+    }
+    .cutup h1 {
+        width: 100%;
+        text-align: center;
+        color: white;
+        position: absolute;
+        font-size: 2rem;
+        top: 30%;
+    }
+
+    .text h1, .text h2 {
+        font-size: 50%;
+    }
+    
+    .ice3 .a, .ice3 .b {
+        width: 100%;
+    }
+
+    .ab h1 {
+        width: 35%;
+    }
+    .ab h2 {
+        font-size: 1.3rem;
+    }
+    .ab p {
+        font-size: 1rem;
+    }
+    .since, .client {
+        width: 30%;
+    }
+    .since h3, .client h3 {
+        font-size: 1.5rem;
+    }
+    .service h1 {
+        width: 35%;
+    }
+    .service h2 {
+        width: 70%;
+        font-size: 1.3rem;
+    }
+    .price {
+        padding: 1.5rem 1rem;
+        margin-top: 0;
+    }
+    .price h1 {
+        width: 45%;
+    }
+    .price h2 {
+        width: 100%;
+        font-size: 1.3rem;
+    }
+    .meet h1 {
+        width: 45%;
+    }
+    .meet h2 {
+        width: 80%;
+        font-size: 1.3rem;
+    }
+
+    .hours {
+        padding: 1.5rem 1rem;
+        margin-top: 0;
+    }
+    .hours h1 {
+        width: 55%;
+    }
+    .hours h2 {
+        width: 100%;
+        font-size: 1.3rem;
+    }
+    .test h1 {
+        width: 35%;
+    }
+    .test h2 {
+        width: 100%;
+        font-size: 1.3rem;
+    }
+    .test h3 {
+        width: 100%;
+        font-size: 1.3rem;
+    }
+    .test h4 {
+        width: 100%;
+    }
+    .test p {
+        width: 90%;
+        font-size: 1rem;
+    }
+    .trio {
+        width: 100%;
+    }
+    .nous {
+        padding: 1.5rem 1rem;
+    }
+    .nous h1 {
+        width: 55%;
+    }
+    .nous h2 {
+        width: 100%;
+        font-size: 1.3rem;
+    }
+    .pripl, .about, .service, .open, .test, .pripl2, .meet {
+        margin-top: 2rem;
+    }
+  
+}
